@@ -9,13 +9,18 @@
 /* Begin PBXBuildFile section */
 		C837A4F22B4C2309009E873D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C837A4F12B4C2309009E873D /* AppDelegate.swift */; };
 		C837A4F42B4C2309009E873D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C837A4F32B4C2309009E873D /* SceneDelegate.swift */; };
-		C837A4F62B4C2309009E873D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C837A4F52B4C2309009E873D /* ViewController.swift */; };
-		C837A4F92B4C2309009E873D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C837A4F72B4C2309009E873D /* Main.storyboard */; };
 		C837A4FB2B4C230B009E873D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C837A4FA2B4C230B009E873D /* Assets.xcassets */; };
 		C837A4FE2B4C230B009E873D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C837A4FC2B4C230B009E873D /* LaunchScreen.storyboard */; };
 		C837A5092B4C230B009E873D /* MYCash_TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C837A5082B4C230B009E873D /* MYCash_TaskTests.swift */; };
 		C837A5132B4C230B009E873D /* MYCash_TaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C837A5122B4C230B009E873D /* MYCash_TaskUITests.swift */; };
 		C837A5152B4C230B009E873D /* MYCash_TaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C837A5142B4C230B009E873D /* MYCash_TaskUITestsLaunchTests.swift */; };
+		C837A52B2B4C270D009E873D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C837A52A2B4C270D009E873D /* AppCoordinator.swift */; };
+		C837A52D2B4C2BEA009E873D /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C837A52C2B4C2BEA009E873D /* LoginCoordinator.swift */; };
+		C837A5312B4C2CA9009E873D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C837A52F2B4C2CA9009E873D /* LoginVC.swift */; };
+		C837A5322B4C2CA9009E873D /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C837A5302B4C2CA9009E873D /* LoginVC.xib */; };
+		C837A5362B4C2CF4009E873D /* SplashScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C837A5342B4C2CF4009E873D /* SplashScreenVC.swift */; };
+		C837A5372B4C2CF4009E873D /* SplashScreenVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C837A5352B4C2CF4009E873D /* SplashScreenVC.xib */; };
+		C837A5392B4C2E30009E873D /* SplashScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C837A5382B4C2E30009E873D /* SplashScreenCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +44,6 @@
 		C837A4EE2B4C2309009E873D /* MYCash-Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MYCash-Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C837A4F12B4C2309009E873D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C837A4F32B4C2309009E873D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C837A4F52B4C2309009E873D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C837A4F82B4C2309009E873D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C837A4FA2B4C230B009E873D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C837A4FD2B4C230B009E873D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C837A4FF2B4C230B009E873D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +52,13 @@
 		C837A50E2B4C230B009E873D /* MYCash-TaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MYCash-TaskUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C837A5122B4C230B009E873D /* MYCash_TaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MYCash_TaskUITests.swift; sourceTree = "<group>"; };
 		C837A5142B4C230B009E873D /* MYCash_TaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MYCash_TaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C837A52A2B4C270D009E873D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		C837A52C2B4C2BEA009E873D /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		C837A52F2B4C2CA9009E873D /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		C837A5302B4C2CA9009E873D /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
+		C837A5342B4C2CF4009E873D /* SplashScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenVC.swift; sourceTree = "<group>"; };
+		C837A5352B4C2CF4009E873D /* SplashScreenVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashScreenVC.xib; sourceTree = "<group>"; };
+		C837A5382B4C2E30009E873D /* SplashScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +109,13 @@
 		C837A4F02B4C2309009E873D /* MYCash-Task */ = {
 			isa = PBXGroup;
 			children = (
-				C837A4F12B4C2309009E873D /* AppDelegate.swift */,
-				C837A4F32B4C2309009E873D /* SceneDelegate.swift */,
-				C837A4F52B4C2309009E873D /* ViewController.swift */,
-				C837A4F72B4C2309009E873D /* Main.storyboard */,
-				C837A4FA2B4C230B009E873D /* Assets.xcassets */,
-				C837A4FC2B4C230B009E873D /* LaunchScreen.storyboard */,
-				C837A4FF2B4C230B009E873D /* Info.plist */,
+				C837A5212B4C23F2009E873D /* Core */,
+				C837A5232B4C2623009E873D /* Managers */,
+				C837A5262B4C2693009E873D /* Utilities */,
+				C837A5242B4C2635009E873D /* Networking */,
+				C837A5292B4C26EA009E873D /* Coordinators */,
+				C837A5222B4C260A009E873D /* Modules */,
+				C837A5252B4C264A009E873D /* Resources */,
 			);
 			path = "MYCash-Task";
 			sourceTree = "<group>";
@@ -125,6 +135,99 @@
 				C837A5142B4C230B009E873D /* MYCash_TaskUITestsLaunchTests.swift */,
 			);
 			path = "MYCash-TaskUITests";
+			sourceTree = "<group>";
+		};
+		C837A5212B4C23F2009E873D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C837A4F12B4C2309009E873D /* AppDelegate.swift */,
+				C837A4F32B4C2309009E873D /* SceneDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C837A5222B4C260A009E873D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C837A5332B4C2CBA009E873D /* SplashScreenVC */,
+				C837A52E2B4C2C89009E873D /* LoginVC */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C837A5232B4C2623009E873D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		C837A5242B4C2635009E873D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C837A5252B4C264A009E873D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C837A4FA2B4C230B009E873D /* Assets.xcassets */,
+				C837A4FF2B4C230B009E873D /* Info.plist */,
+				C837A4FC2B4C230B009E873D /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C837A5262B4C2693009E873D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C837A5282B4C26BB009E873D /* Extensions */,
+				C837A5272B4C2699009E873D /* Reusable Components */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		C837A5272B4C2699009E873D /* Reusable Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Reusable Components";
+			sourceTree = "<group>";
+		};
+		C837A5282B4C26BB009E873D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C837A5292B4C26EA009E873D /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				C837A52A2B4C270D009E873D /* AppCoordinator.swift */,
+				C837A52C2B4C2BEA009E873D /* LoginCoordinator.swift */,
+				C837A5382B4C2E30009E873D /* SplashScreenCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		C837A52E2B4C2C89009E873D /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				C837A52F2B4C2CA9009E873D /* LoginVC.swift */,
+				C837A5302B4C2CA9009E873D /* LoginVC.xib */,
+			);
+			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		C837A5332B4C2CBA009E873D /* SplashScreenVC */ = {
+			isa = PBXGroup;
+			children = (
+				C837A5342B4C2CF4009E873D /* SplashScreenVC.swift */,
+				C837A5352B4C2CF4009E873D /* SplashScreenVC.xib */,
+			);
+			path = SplashScreenVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,9 +334,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C837A5322B4C2CA9009E873D /* LoginVC.xib in Resources */,
 				C837A4FE2B4C230B009E873D /* LaunchScreen.storyboard in Resources */,
 				C837A4FB2B4C230B009E873D /* Assets.xcassets in Resources */,
-				C837A4F92B4C2309009E873D /* Main.storyboard in Resources */,
+				C837A5372B4C2CF4009E873D /* SplashScreenVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +362,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C837A4F62B4C2309009E873D /* ViewController.swift in Sources */,
+				C837A52B2B4C270D009E873D /* AppCoordinator.swift in Sources */,
 				C837A4F22B4C2309009E873D /* AppDelegate.swift in Sources */,
+				C837A52D2B4C2BEA009E873D /* LoginCoordinator.swift in Sources */,
+				C837A5392B4C2E30009E873D /* SplashScreenCoordinator.swift in Sources */,
+				C837A5362B4C2CF4009E873D /* SplashScreenVC.swift in Sources */,
 				C837A4F42B4C2309009E873D /* SceneDelegate.swift in Sources */,
+				C837A5312B4C2CA9009E873D /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +405,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C837A4F72B4C2309009E873D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C837A4F82B4C2309009E873D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C837A4FC2B4C230B009E873D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -444,10 +544,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZCB87QTSJD;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "MYCash-Task/Info.plist";
+				INFOPLIST_FILE = "MYCash-Task/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -472,10 +571,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZCB87QTSJD;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "MYCash-Task/Info.plist";
+				INFOPLIST_FILE = "MYCash-Task/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
