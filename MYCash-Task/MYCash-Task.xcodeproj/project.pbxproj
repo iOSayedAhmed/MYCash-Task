@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C802C5F42B4C86FE0069033B /* StyledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C802C5F32B4C86FE0069033B /* StyledButton.swift */; };
+		C802C5F62B4C881F0069033B /* StyledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C802C5F52B4C881F0069033B /* StyledTextField.swift */; };
+		C802C5F82B4C895A0069033B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C802C5F72B4C895A0069033B /* Colors.xcassets */; };
+		C802C5FA2B4C8B2B0069033B /* StyledPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C802C5F92B4C8B2B0069033B /* StyledPasswordTextField.swift */; };
+		C802C5FC2B4C8BC80069033B /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C802C5FB2B4C8BC80069033B /* UITextField+Extensions.swift */; };
+		C802C5FE2B4C8CEA0069033B /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C802C5FD2B4C8CEA0069033B /* UserDefaultManager.swift */; };
+		C802C6002B4C8D6F0069033B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C802C5FF2B4C8D6F0069033B /* Colors.swift */; };
 		C837A4F22B4C2309009E873D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C837A4F12B4C2309009E873D /* AppDelegate.swift */; };
 		C837A4F42B4C2309009E873D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C837A4F32B4C2309009E873D /* SceneDelegate.swift */; };
 		C837A4FB2B4C230B009E873D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C837A4FA2B4C230B009E873D /* Assets.xcassets */; };
@@ -41,6 +48,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C802C5F32B4C86FE0069033B /* StyledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledButton.swift; sourceTree = "<group>"; };
+		C802C5F52B4C881F0069033B /* StyledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledTextField.swift; sourceTree = "<group>"; };
+		C802C5F72B4C895A0069033B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		C802C5F92B4C8B2B0069033B /* StyledPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledPasswordTextField.swift; sourceTree = "<group>"; };
+		C802C5FB2B4C8BC80069033B /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		C802C5FD2B4C8CEA0069033B /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		C802C5FF2B4C8D6F0069033B /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		C837A4EE2B4C2309009E873D /* MYCash-Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MYCash-Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C837A4F12B4C2309009E873D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C837A4F32B4C2309009E873D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +172,7 @@
 		C837A5232B4C2623009E873D /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				C802C5FD2B4C8CEA0069033B /* UserDefaultManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -173,8 +188,10 @@
 			isa = PBXGroup;
 			children = (
 				C837A4FA2B4C230B009E873D /* Assets.xcassets */,
+				C802C5F72B4C895A0069033B /* Colors.xcassets */,
 				C837A4FF2B4C230B009E873D /* Info.plist */,
 				C837A4FC2B4C230B009E873D /* LaunchScreen.storyboard */,
+				C802C5FF2B4C8D6F0069033B /* Colors.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -191,6 +208,9 @@
 		C837A5272B4C2699009E873D /* Reusable Components */ = {
 			isa = PBXGroup;
 			children = (
+				C802C5F32B4C86FE0069033B /* StyledButton.swift */,
+				C802C5F52B4C881F0069033B /* StyledTextField.swift */,
+				C802C5F92B4C8B2B0069033B /* StyledPasswordTextField.swift */,
 			);
 			path = "Reusable Components";
 			sourceTree = "<group>";
@@ -198,6 +218,7 @@
 		C837A5282B4C26BB009E873D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C802C5FB2B4C8BC80069033B /* UITextField+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -334,6 +355,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C802C5F82B4C895A0069033B /* Colors.xcassets in Resources */,
 				C837A5322B4C2CA9009E873D /* LoginVC.xib in Resources */,
 				C837A4FE2B4C230B009E873D /* LaunchScreen.storyboard in Resources */,
 				C837A4FB2B4C230B009E873D /* Assets.xcassets in Resources */,
@@ -362,12 +384,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C802C5FC2B4C8BC80069033B /* UITextField+Extensions.swift in Sources */,
 				C837A52B2B4C270D009E873D /* AppCoordinator.swift in Sources */,
+				C802C5F62B4C881F0069033B /* StyledTextField.swift in Sources */,
+				C802C5F42B4C86FE0069033B /* StyledButton.swift in Sources */,
+				C802C5FA2B4C8B2B0069033B /* StyledPasswordTextField.swift in Sources */,
 				C837A4F22B4C2309009E873D /* AppDelegate.swift in Sources */,
 				C837A52D2B4C2BEA009E873D /* LoginCoordinator.swift in Sources */,
 				C837A5392B4C2E30009E873D /* SplashScreenCoordinator.swift in Sources */,
+				C802C6002B4C8D6F0069033B /* Colors.swift in Sources */,
 				C837A5362B4C2CF4009E873D /* SplashScreenVC.swift in Sources */,
 				C837A4F42B4C2309009E873D /* SceneDelegate.swift in Sources */,
+				C802C5FE2B4C8CEA0069033B /* UserDefaultManager.swift in Sources */,
 				C837A5312B4C2CA9009E873D /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
