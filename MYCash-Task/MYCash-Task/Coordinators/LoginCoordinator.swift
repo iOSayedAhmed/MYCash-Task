@@ -21,13 +21,17 @@ final class LoginCoordinator:Coordinator {
     }
     
     func start() {
-        let loginVC = LoginVC(nibName: "LoginVC", bundle: nil)
-//        let loginViewModel = LoginViewModel()
-//    loginViewModel.coordinator = self
-//        loginVC.viewModel = loginViewModel
-        navigationController.setViewControllers([loginVC], animated: false)
+        let loginViewModel = LoginViewModel(coordinator: self,networkService: BasicNetworkService())
+        let loginVC = LoginVC(viewModel: loginViewModel, nibName:"\(LoginVC.self)")
+        print(loginViewModel)
+        navigationController.setViewControllers([loginVC], animated: true)
     }
     
+    func startHomeCoordinator(userData:UserData){
+        let homeCoordinator = HomeCoordinator(navigationController: navigationController, userData: userData)
+        homeCoordinator.parentCoordinator = self
+        homeCoordinator.start()
+    }
 
 
     
