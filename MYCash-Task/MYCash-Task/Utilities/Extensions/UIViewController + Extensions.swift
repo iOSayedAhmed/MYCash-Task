@@ -19,4 +19,25 @@ extension UIViewController {
     func isValidPassword(_ password: String) -> Bool {
         return password.count >= 6
     }
+    
+    func isValidName(_ name: String) -> Bool {
+        return name.count <= 14
+    }
+
+    func arePasswordsEqual(_ password: String, _ confirmPassword: String) -> Bool {
+        return password == confirmPassword
+    }
+
+    func isPasswordValid(_ password: String) -> Bool {
+        return password.count >= 8
+    }
+
+    func isValidPhone(_ phone: String) -> Bool {
+        return phone.count == 11
+    }
+
+    func showMessage(typeMessage type:ToastType,message:String){
+        ToastManager.shared.showToast(message: message, type: type, view: self.view)
+
+    }
 }
