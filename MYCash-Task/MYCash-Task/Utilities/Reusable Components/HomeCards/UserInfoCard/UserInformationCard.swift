@@ -12,6 +12,13 @@ class UserInformationCard: UIView {
     //MARK: - IBOutlet
     
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var addressName: UILabel!
+    @IBOutlet weak var profileButton: UIButton!
+    @IBOutlet weak var serchTextField: UITextField!
+    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var filterButton: UIButton!
+    
     
     
     override func awakeFromNib() {
@@ -34,6 +41,13 @@ class UserInformationCard: UIView {
 
     
     // MARK: - Methods
+    
+    func configureDataView(userData:UserData){
+        userName.text = userData.name ?? ""
+        if !(userData.addresses?.isEmpty ?? false) {
+            addressName.text = userData.addresses?[0].address ?? ""
+        }
+    }
     
     private func setupView(){
         containerView.setGradiantBackground(.gray, .white, startPoint: CGPoint(x: 0.0, y: 0.0), endPoint: CGPoint(x: 0.0, y: 1.0))
