@@ -26,9 +26,11 @@ class StyledButton: UIButton {
     func setupButtonStyles() {
         // Apply your styles here
         self.setTitleColor(.white, for: .normal)
+        self.setTitleColor(.black, for: .disabled)
         self.backgroundColor = Colors.PrimaryButtonColor
-        self.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
+        self.titleLabel?.font = .systemFont(ofSize: 24, weight: .medium)
         self.layer.cornerRadius = 12
+       
          }
 
          override func layoutSubviews() {

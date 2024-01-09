@@ -23,6 +23,36 @@ class StyledPasswordTextField: UITextField {
         super.init(coder: aDecoder)
         setup()
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        applyInnerShadow()
+    }
+    
+    private func applyInnerShadow() {
+           let innerShadowLayer = CALayer()
+           innerShadowLayer.frame = self.bounds
+           
+           let radius: CGFloat = 10
+           let path = UIBezierPath(roundedRect: innerShadowLayer.bounds.insetBy(dx: -9, dy: -8), cornerRadius: radius)
+           let innerPath = UIBezierPath(roundedRect: innerShadowLayer.bounds, cornerRadius: radius).reversing()
+           
+           path.append(innerPath)
+           
+           innerShadowLayer.shadowPath = path.cgPath
+           innerShadowLayer.masksToBounds = true
+           innerShadowLayer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.05).cgColor
+           innerShadowLayer.shadowOffset = CGSize(width: 9, height: 8)
+        innerShadowLayer.shadowOpacity = 0.7
+           innerShadowLayer.shadowRadius = 5
+           innerShadowLayer.cornerRadius = radius
+        innerShadowLayer.cornerRadius = self.layer.cornerRadius
+        innerShadowLayer.borderWidth = self.layer.borderWidth
+        innerShadowLayer.borderColor = self.layer.borderColor
+           
+           self.layer.addSublayer(innerShadowLayer)
+           self.layer.masksToBounds = true
+       }
     let padding = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         override func textRect(forBounds bounds: CGRect) -> CGRect {
             return bounds.inset(by: padding)
