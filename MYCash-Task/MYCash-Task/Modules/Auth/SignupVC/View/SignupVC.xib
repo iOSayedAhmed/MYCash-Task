@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignupVC" customModule="MYCash_Task" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndecator" destination="CFs-Qe-qDq" id="5OF-4C-cE7"/>
                 <outlet property="confirmPasswordTextField" destination="JPC-Vo-p3x" id="R5d-m4-XbH"/>
                 <outlet property="containerView" destination="B5v-kK-NqO" id="dKp-EE-OOb"/>
                 <outlet property="emailTextField" destination="HMj-g1-FTv" id="HO9-RS-N56"/>
@@ -42,7 +44,7 @@
                     <rect key="frame" x="123" y="62.666666666666664" width="147" height="77.666666666666686"/>
                 </imageView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdP-fF-K0T">
-                    <rect key="frame" x="0.0" y="170.33333333333331" width="393" height="681.66666666666652"/>
+                    <rect key="frame" x="0.0" y="170.33333333333331" width="393" height="681.66666666666674"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uco-IR-Ayp">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="688.66666666666663"/>
@@ -230,6 +232,13 @@
                     <viewLayoutGuide key="contentLayoutGuide" id="ffV-Ng-uHR"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="F2S-nv-e3H"/>
                 </scrollView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="CFs-Qe-qDq">
+                    <rect key="frame" x="176.66666666666666" y="418.66666666666669" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Cyx-Bu-Shq"/>
+                        <constraint firstAttribute="width" secondItem="CFs-Qe-qDq" secondAttribute="height" multiplier="1:1" id="c6s-vE-oL8"/>
+                    </constraints>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -237,7 +246,9 @@
                 <constraint firstItem="HdP-fF-K0T" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2Lc-b5-ZAU"/>
                 <constraint firstItem="WpS-mH-iKl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5YW-4g-J6H"/>
                 <constraint firstItem="WpS-mH-iKl" firstAttribute="width" secondItem="8TV-SD-ayb" secondAttribute="width" multiplier="0.374359" id="Ad1-Ne-7Bf"/>
+                <constraint firstItem="CFs-Qe-qDq" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="AoE-4X-M5V"/>
                 <constraint firstItem="HdP-fF-K0T" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Esu-wf-n7g"/>
+                <constraint firstItem="CFs-Qe-qDq" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="LRS-cc-DBO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8TV-SD-ayb" secondAttribute="trailing" id="Zkq-9V-Vab"/>
                 <constraint firstAttribute="bottom" secondItem="HdP-fF-K0T" secondAttribute="bottom" id="aWW-Cm-n9t"/>
                 <constraint firstItem="8TV-SD-ayb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="cm1-RT-y0O"/>

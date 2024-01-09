@@ -22,13 +22,21 @@ final class SignupCoordinator:Coordinator {
     }
     
     func start() {
-        let signupVC = SignupVC()
-//        let loginViewModel = LoginViewModel()
-//    loginViewModel.coordinator = self
-//        loginVC.viewModel = loginViewModel
-        navigationController.setViewControllers([signupVC], animated: true)
+        let signupViewModel = SignupViewModel(coordinator: self,networkService: BasicNetworkService())
+        let signupVC = SignupVC(signupViewModel: signupViewModel, nibName: "\(SignupVC.self)")
+        navigationController.pushViewController(signupVC, animated: true)
+
     }
     
+    func startHomeCoordinator(userData:UserData){
+        let homeCoordinator = HomeCoordinator(navigationController: navigationController, userData: userData)
+        homeCoordinator.parentCoordinator = self
+        homeCoordinator.start()
+    }
+    
+    func backToLoginCoordinator(){
+        navigationController.popViewController(animated: true)
+    }
 
 
     
