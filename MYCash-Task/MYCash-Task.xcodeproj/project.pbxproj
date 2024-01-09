@@ -38,6 +38,10 @@
 		C802C63F2B4D68D80069033B /* UserInformationCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = C802C63E2B4D68D80069033B /* UserInformationCard.xib */; };
 		C816C59C2B4DB9790059E1A4 /* UIViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C816C59B2B4DB9790059E1A4 /* UIViewController + Extensions.swift */; };
 		C816C5A12B4DCFDF0059E1A4 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C816C5A02B4DCFDF0059E1A4 /* SignupViewModel.swift */; };
+		C816C5A52B4DF2550059E1A4 /* ToastManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C816C5A42B4DF2550059E1A4 /* ToastManager.swift */; };
+		C816C5A72B4DF26E0059E1A4 /* KeyboardStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C816C5A62B4DF26E0059E1A4 /* KeyboardStateManager.swift */; };
+		C816C5A92B4DF2BC0059E1A4 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C816C5A82B4DF2BC0059E1A4 /* ToastView.swift */; };
+		C816C5AB2B4DF2DB0059E1A4 /* ToastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C816C5AA2B4DF2DB0059E1A4 /* ToastView.xib */; };
 		C837A4F22B4C2309009E873D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C837A4F12B4C2309009E873D /* AppDelegate.swift */; };
 		C837A4F42B4C2309009E873D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C837A4F32B4C2309009E873D /* SceneDelegate.swift */; };
 		C837A4FB2B4C230B009E873D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C837A4FA2B4C230B009E873D /* Assets.xcassets */; };
@@ -52,6 +56,10 @@
 		C837A5362B4C2CF4009E873D /* SplashScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C837A5342B4C2CF4009E873D /* SplashScreenVC.swift */; };
 		C837A5372B4C2CF4009E873D /* SplashScreenVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C837A5352B4C2CF4009E873D /* SplashScreenVC.xib */; };
 		C837A5392B4C2E30009E873D /* SplashScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C837A5382B4C2E30009E873D /* SplashScreenCoordinator.swift */; };
+		C8F528C22B4E0284002E6FDC /* CategoriesCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8F528C12B4E0284002E6FDC /* CategoriesCard.xib */; };
+		C8F528C42B4E029A002E6FDC /* CategoriesCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F528C32B4E029A002E6FDC /* CategoriesCard.swift */; };
+		C8F528C82B4E05DF002E6FDC /* CategoriesCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F528C62B4E05DF002E6FDC /* CategoriesCardCell.swift */; };
+		C8F528C92B4E05DF002E6FDC /* CategoriesCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8F528C72B4E05DF002E6FDC /* CategoriesCardCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +106,10 @@
 		C802C63E2B4D68D80069033B /* UserInformationCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInformationCard.xib; sourceTree = "<group>"; };
 		C816C59B2B4DB9790059E1A4 /* UIViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extensions.swift"; sourceTree = "<group>"; };
 		C816C5A02B4DCFDF0059E1A4 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		C816C5A42B4DF2550059E1A4 /* ToastManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastManager.swift; sourceTree = "<group>"; };
+		C816C5A62B4DF26E0059E1A4 /* KeyboardStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardStateManager.swift; sourceTree = "<group>"; };
+		C816C5A82B4DF2BC0059E1A4 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		C816C5AA2B4DF2DB0059E1A4 /* ToastView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToastView.xib; sourceTree = "<group>"; };
 		C837A4EE2B4C2309009E873D /* MYCash-Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MYCash-Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C837A4F12B4C2309009E873D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C837A4F32B4C2309009E873D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +128,10 @@
 		C837A5342B4C2CF4009E873D /* SplashScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenVC.swift; sourceTree = "<group>"; };
 		C837A5352B4C2CF4009E873D /* SplashScreenVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashScreenVC.xib; sourceTree = "<group>"; };
 		C837A5382B4C2E30009E873D /* SplashScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenCoordinator.swift; sourceTree = "<group>"; };
+		C8F528C12B4E0284002E6FDC /* CategoriesCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCard.xib; sourceTree = "<group>"; };
+		C8F528C32B4E029A002E6FDC /* CategoriesCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCard.swift; sourceTree = "<group>"; };
+		C8F528C62B4E05DF002E6FDC /* CategoriesCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCardCell.swift; sourceTree = "<group>"; };
+		C8F528C72B4E05DF002E6FDC /* CategoriesCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCardCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +238,7 @@
 		C802C62E2B4D49470069033B /* HomeCards */ = {
 			isa = PBXGroup;
 			children = (
+				C8F528C02B4E025A002E6FDC /* CategoriesCard */,
 				C802C62F2B4D49570069033B /* UserInfoCard */,
 			);
 			path = HomeCards;
@@ -275,6 +292,15 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C816C5A32B4DF2210059E1A4 /* ToastMassage */ = {
+			isa = PBXGroup;
+			children = (
+				C816C5A82B4DF2BC0059E1A4 /* ToastView.swift */,
+				C816C5AA2B4DF2DB0059E1A4 /* ToastView.xib */,
+			);
+			path = ToastMassage;
 			sourceTree = "<group>";
 		};
 		C837A4E52B4C2309009E873D = {
@@ -352,6 +378,8 @@
 			isa = PBXGroup;
 			children = (
 				C802C5FD2B4C8CEA0069033B /* UserDefaultManager.swift */,
+				C816C5A42B4DF2550059E1A4 /* ToastManager.swift */,
+				C816C5A62B4DF26E0059E1A4 /* KeyboardStateManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -388,6 +416,7 @@
 		C837A5272B4C2699009E873D /* Reusable Components */ = {
 			isa = PBXGroup;
 			children = (
+				C816C5A32B4DF2210059E1A4 /* ToastMassage */,
 				C802C62E2B4D49470069033B /* HomeCards */,
 				C802C5F32B4C86FE0069033B /* StyledButton.swift */,
 				C802C5F52B4C881F0069033B /* StyledTextField.swift */,
@@ -436,6 +465,25 @@
 				C837A5352B4C2CF4009E873D /* SplashScreenVC.xib */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		C8F528C02B4E025A002E6FDC /* CategoriesCard */ = {
+			isa = PBXGroup;
+			children = (
+				C8F528C52B4E0598002E6FDC /* CategoriesCardCollectionViewCell */,
+				C8F528C12B4E0284002E6FDC /* CategoriesCard.xib */,
+				C8F528C32B4E029A002E6FDC /* CategoriesCard.swift */,
+			);
+			path = CategoriesCard;
+			sourceTree = "<group>";
+		};
+		C8F528C52B4E0598002E6FDC /* CategoriesCardCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C8F528C62B4E05DF002E6FDC /* CategoriesCardCell.swift */,
+				C8F528C72B4E05DF002E6FDC /* CategoriesCardCell.xib */,
+			);
+			path = CategoriesCardCollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -559,7 +607,10 @@
 				C837A4FE2B4C230B009E873D /* LaunchScreen.storyboard in Resources */,
 				C802C63F2B4D68D80069033B /* UserInformationCard.xib in Resources */,
 				C837A4FB2B4C230B009E873D /* Assets.xcassets in Resources */,
+				C8F528C22B4E0284002E6FDC /* CategoriesCard.xib in Resources */,
 				C802C6092B4CB0EB0069033B /* SignupVC.xib in Resources */,
+				C8F528C92B4E05DF002E6FDC /* CategoriesCardCell.xib in Resources */,
+				C816C5AB2B4DF2DB0059E1A4 /* ToastView.xib in Resources */,
 				C837A5372B4C2CF4009E873D /* SplashScreenVC.xib in Resources */,
 				C802C62D2B4D477F0069033B /* HomeVC.xib in Resources */,
 			);
@@ -593,6 +644,7 @@
 				C837A52B2B4C270D009E873D /* AppCoordinator.swift in Sources */,
 				C802C5F62B4C881F0069033B /* StyledTextField.swift in Sources */,
 				C816C5A12B4DCFDF0059E1A4 /* SignupViewModel.swift in Sources */,
+				C816C5A52B4DF2550059E1A4 /* ToastManager.swift in Sources */,
 				C802C6172B4D2B290069033B /* NetworkService.swift in Sources */,
 				C802C6372B4D5F260069033B /* BasicNetworkService.swift in Sources */,
 				C802C5F42B4C86FE0069033B /* StyledButton.swift in Sources */,
@@ -608,12 +660,16 @@
 				C837A5392B4C2E30009E873D /* SplashScreenCoordinator.swift in Sources */,
 				C802C6002B4C8D6F0069033B /* Colors.swift in Sources */,
 				C802C61C2B4D2BBC0069033B /* Constants.swift in Sources */,
+				C8F528C42B4E029A002E6FDC /* CategoriesCard.swift in Sources */,
+				C816C5A92B4DF2BC0059E1A4 /* ToastView.swift in Sources */,
 				C802C6342B4D49D40069033B /* UserInformationCard.swift in Sources */,
 				C837A5362B4C2CF4009E873D /* SplashScreenVC.swift in Sources */,
 				C802C6392B4D612C0069033B /* HomeCoordinator.swift in Sources */,
 				C837A4F42B4C2309009E873D /* SceneDelegate.swift in Sources */,
+				C8F528C82B4E05DF002E6FDC /* CategoriesCardCell.swift in Sources */,
 				C802C5FE2B4C8CEA0069033B /* UserDefaultManager.swift in Sources */,
 				C837A5312B4C2CA9009E873D /* LoginVC.swift in Sources */,
+				C816C5A72B4DF26E0059E1A4 /* KeyboardStateManager.swift in Sources */,
 				C802C6242B4D31110069033B /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -795,6 +851,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -822,6 +879,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

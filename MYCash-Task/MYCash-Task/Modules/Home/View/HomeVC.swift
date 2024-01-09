@@ -20,6 +20,7 @@ class HomeVC: UIViewController {
     private let disposeBag = DisposeBag()
     
     private let userInformationCard = UserInformationCard()
+    private let categoriesCard = CategoriesCard()
     
     //MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -51,7 +52,11 @@ class HomeVC: UIViewController {
     
     // Add the custom view to the stack view
     private func addCustomViewToStack() {
-            mainStackView.addArrangedSubview(userInformationCard)
+        categoriesCard.translatesAutoresizingMaskIntoConstraints = false
+        mainStackView.addArrangedSubview(userInformationCard)
+        mainStackView.addArrangedSubview(categoriesCard)
+    
+        categoriesCard.heightAnchor.constraint(equalToConstant: 200).isActive = true
         }
 
 }
