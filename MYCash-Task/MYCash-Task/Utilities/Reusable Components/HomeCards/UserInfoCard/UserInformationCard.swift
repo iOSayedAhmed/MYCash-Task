@@ -31,12 +31,14 @@ class UserInformationCard: UIView {
         override init(frame: CGRect) {
             super.init(frame: frame)
             loadViewFromNib()
+            setupView()
         }
 
         // This init method is used when the view is loaded from a nib
         required init?(coder aDecoder: NSCoder) {
             super.init(coder: aDecoder)
             loadViewFromNib()
+            setupView()
         }
 
     
@@ -50,7 +52,7 @@ class UserInformationCard: UIView {
     }
     
     private func setupView(){
-        containerView.setGradiantBackground(.gray, .white, startPoint: CGPoint(x: 0.0, y: 0.0), endPoint: CGPoint(x: 0.0, y: 1.0))
+        containerView.setGradiantBackground(.secondText.withAlphaComponent(0.1), .white, startPoint: CGPoint(x: 0.0, y: 0.0), endPoint: CGPoint(x: 0.0, y: 1.0))
     }
     
         private func commonInit() {
