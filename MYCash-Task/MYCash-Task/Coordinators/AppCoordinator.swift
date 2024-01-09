@@ -33,7 +33,8 @@ final class AppCoordinator:Coordinator {
     
     
     func startSplashScreen(){
-        let splashScreenCoordinator = SplashScreenCoordinator(navigationController: navigationController)
+//        let splashScreenCoordinator = SplashScreenCoordinator(navigationController: navigationController)
+        let splashScreenCoordinator = LoginCoordinator(navigationController: navigationController)
         childCoordinators.append(splashScreenCoordinator)
         splashScreenCoordinator.start()
     }
