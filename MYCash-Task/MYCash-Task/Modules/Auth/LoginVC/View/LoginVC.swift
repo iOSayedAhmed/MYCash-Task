@@ -20,7 +20,7 @@ class LoginVC: UIViewController {
     @IBOutlet private weak var forggetPasswordButton: UIButton!
     @IBOutlet private weak var loginButton: StyledButton!
     @IBOutlet private weak var signupButton: UIButton!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     
     private var loginViewModel:LoginViewModel!
     private let disposeBag = DisposeBag()
@@ -60,6 +60,7 @@ class LoginVC: UIViewController {
         emailTextField.setPadding(horizontal: 12)
         passwordTextField.setPadding(horizontal: 12)
         activityIndicator.hidesWhenStopped = true
+        setPlaceholders()
     }
     private func setPlaceholders(){
         emailTextField.placeholder = "Write your email"
@@ -67,9 +68,9 @@ class LoginVC: UIViewController {
     }
     
     private func setupBindings() {
-            // Assuming you have outlets for emailTextField and passwordTextField
             loginButton.rx.tap
-            .debug("Login Button Tap")
+                .debug("Login Button Tap")
+                .throttle(RxTimeInterval.milliseconds(300), scheduler: MainScheduler.instance)
                 .withLatestFrom(Observable.combineLatest(emailTextField.rx.text.orEmpty, passwordTextField.rx.text.orEmpty))
                 .subscribe(onNext: { [weak self] email, password in
                     let deviceToken = "12233454566787877"
@@ -85,11 +86,15 @@ class LoginVC: UIViewController {
 
             loginViewModel.loginResult
                 .subscribe(onNext: { [weak self] loginModel in
-                    guard let self else {return}
+                    guard let self , let userData = loginModel.data else {return}
                     print("Login successful: \(loginModel)")
-                    self.loginViewModel.didUserLoggedIn(userData: loginModel)
+                    if loginModel.success ?? false && loginModel.responseCode ?? 0 == 200 {
+                        self.loginViewModel.didUserLoggedIn(userData: userData)
+                    }else {
+                        showMessage(typeMessage: .error, message: loginModel.message ?? "")
+                    }
+                    
                 }, onError: { error in
-                    // Handle login error, show error message, etc.
                     print("Login error: \(error)")
                 })
                 .disposed(by: disposeBag)
@@ -107,7 +112,15 @@ class LoginVC: UIViewController {
             .bind(to: loginButton.rx.isEnabled)
             .disposed(by: disposeBag)
         
+        signupButton.rx.tap
+            .subscribe(onNext: {[weak self] in
+                guard let self else {return}
+                self.loginViewModel.didTappedOnSignup()
+            }).disposed(by: disposeBag)
+            
+        
         }
+    
     
     
 }

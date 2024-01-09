@@ -32,7 +32,10 @@ final class LoginCoordinator:Coordinator {
         homeCoordinator.parentCoordinator = self
         homeCoordinator.start()
     }
-
-
+    
+    func startSignupCoordinator(){
+        let signupCoordinator =  SignupCoordinator(navigationController: navigationController)
+        signupCoordinator.start()
+    }
     
 }
