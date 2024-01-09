@@ -14,5 +14,5 @@ enum MyCashAPIURLs {
 enum MYCashAPIPaths {
     static let login = "/login"
     static let clientProfile = "/client-profile"
-    
+    static let clientRegister = "/client-register"
 }
