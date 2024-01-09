@@ -15,17 +15,19 @@ class StyledTextField: UITextField {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupTextFieldStyles()
+        applyInnerShadow()
     }
     
     // Init from storyboard
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupTextFieldStyles()
+        applyInnerShadow()
+
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        applyInnerShadow()
     }
     func setupTextFieldStyles() {
         // Apply your styles here

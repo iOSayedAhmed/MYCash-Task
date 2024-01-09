@@ -16,17 +16,19 @@ class StyledPasswordTextField: UITextField {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
+        applyInnerShadow()
     }
     
     // Init from storyboard
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
+        applyInnerShadow()
+
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        applyInnerShadow()
     }
     
     private func applyInnerShadow() {
