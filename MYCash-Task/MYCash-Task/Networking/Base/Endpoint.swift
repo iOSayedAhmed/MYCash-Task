@@ -20,6 +20,7 @@ protocol Endpoint:URLRequestConvertible {
 enum MyCashEndpoint: Endpoint {
         
     case login(parameters:Parameters)
+    case register(Parameters:Parameters)
 
     
     var baseURL:URL {
@@ -30,12 +31,16 @@ enum MyCashEndpoint: Endpoint {
         switch self {
         case .login:
             return MYCashAPIPaths.login
+        case .register:
+            return MYCashAPIPaths.clientRegister
         }
     }
     
     var method: HTTPMethod {
         switch self {
         case .login:
+            return .post
+        case .register:
             return .post
         }
     }
@@ -44,14 +49,16 @@ enum MyCashEndpoint: Endpoint {
         switch self {
         case .login(let params):
             return params
+        case .register(Parameters: let Params):
+            return Params
         }
     }
     
     var headers: HTTPHeaders? {
         switch self {
-        case .login:
+        case .login , .register:
             return HTTPHeaders(["Accept":"application/json",
-                                "lang":"ar",
+                                "lang":"en",
                                ])
         }
     }
@@ -64,8 +71,9 @@ enum MyCashEndpoint: Endpoint {
             request.method  = method
 
         switch self {
-        case .login:
+        case .login , .register:
             request = try URLEncoding.default.encode(request,with: parameters)
+        
         }
         print(request)
             return request
