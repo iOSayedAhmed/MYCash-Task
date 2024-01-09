@@ -18,7 +18,9 @@ class HomeVC: UIViewController {
     
     private let homeViewModel:HomeViewModel!
     private let disposeBag = DisposeBag()
-
+    
+    private let userInformationCard = UserInformationCard()
+    
     //MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,14 +46,12 @@ class HomeVC: UIViewController {
     // MARK: - Methods
 
     private func setupView(){
-        
+        userInformationCard.configureDataView(userData: homeViewModel.userData ?? UserData())
     }
     
+    // Add the custom view to the stack view
     private func addCustomViewToStack() {
-        let customView = UserInformationCard()
-        
-            // Add the custom view to the stack view
-            mainStackView.addArrangedSubview(customView)
+            mainStackView.addArrangedSubview(userInformationCard)
         }
 
 }
