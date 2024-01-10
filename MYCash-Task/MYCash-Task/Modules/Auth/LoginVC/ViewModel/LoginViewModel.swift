@@ -44,7 +44,6 @@ final class LoginViewModel:LoginViewModelProtocol {
         let params = ["email":email,"password":password,"device_token":deviceToken]
         
         networkService.request(MyCashEndpoint.login(parameters: params))
-            
             .subscribe(onSuccess: { [weak self] (loginModel:LoginModel) in
                 guard let self  else {return}
                 self.isLoading.accept(false)

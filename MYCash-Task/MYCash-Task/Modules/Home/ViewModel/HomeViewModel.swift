@@ -7,7 +7,7 @@
 
 import Foundation
 protocol HomeViewModelProtocol{
-    
+    func retriveUserData()
 }
 
 final class HomeViewModel:HomeViewModelProtocol {
@@ -21,5 +21,9 @@ final class HomeViewModel:HomeViewModelProtocol {
         self.userData = userData
     }
     
+    func retriveUserData(){
+        userData = UserDefaults.standard.getCodableObject(forKey: .saveUserData)
+        print(userData?.name ?? "")
+    }
     
 }
