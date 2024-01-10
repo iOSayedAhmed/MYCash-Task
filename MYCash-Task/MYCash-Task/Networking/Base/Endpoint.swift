@@ -21,6 +21,9 @@ enum MyCashEndpoint: Endpoint {
         
     case login(parameters:Parameters)
     case register(Parameters:Parameters)
+    case homeCategory
+    case homePopular(Parameters:Parameters)
+    case homeTrending(Parameters:Parameters)
 
     
     var baseURL:URL {
@@ -33,6 +36,12 @@ enum MyCashEndpoint: Endpoint {
             return MYCashAPIPaths.login
         case .register:
             return MYCashAPIPaths.clientRegister
+        case .homeCategory:
+            return MYCashAPIPaths.homeCategory
+        case .homePopular:
+            return MYCashAPIPaths.homePopular
+        case .homeTrending:
+            return MYCashAPIPaths.hometrTrending
         }
     }
     
@@ -42,6 +51,12 @@ enum MyCashEndpoint: Endpoint {
             return .post
         case .register:
             return .post
+        case .homeCategory:
+            return .get
+        case .homePopular:
+            return .get
+        case .homeTrending:
+            return .get
         }
     }
     
@@ -51,12 +66,18 @@ enum MyCashEndpoint: Endpoint {
             return params
         case .register(Parameters: let Params):
             return Params
+        case .homeCategory:
+            return nil
+        case .homePopular(Parameters: let params):
+            return params
+        case .homeTrending(Parameters: let params):
+            return params
         }
     }
     
     var headers: HTTPHeaders? {
         switch self {
-        case .login , .register:
+        case .login , .register ,.homeCategory,.homePopular, .homeTrending:
             return HTTPHeaders(["Accept":"application/json",
                                 "lang":"en",
                                ])
@@ -71,9 +92,8 @@ enum MyCashEndpoint: Endpoint {
             request.method  = method
 
         switch self {
-        case .login , .register:
+        case .login , .register, .homeCategory, .homePopular, .homeTrending:
             request = try URLEncoding.default.encode(request,with: parameters)
-        
         }
         print(request)
             return request
