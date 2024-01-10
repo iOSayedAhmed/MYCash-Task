@@ -10,6 +10,7 @@ import Foundation
 enum UserDefaultKeys:String {
     case userLoggedin
     case userLoggedout
+    case saveUserData
     
 }
 
