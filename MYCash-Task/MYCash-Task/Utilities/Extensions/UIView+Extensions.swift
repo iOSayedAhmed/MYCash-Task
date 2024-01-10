@@ -191,6 +191,53 @@ extension UIView {
             layer.masksToBounds = false
         }
     
+        func addInnerShadow() {
+            let innerShadow = CALayer()
+            innerShadow.frame = bounds
+            
+            // Shadow path (1pt ring around bounds)
+            let radius = self.layer.cornerRadius
+            let path = UIBezierPath(roundedRect: innerShadow.bounds.insetBy(dx: 2, dy:2), cornerRadius:radius)
+            let cutout = UIBezierPath(roundedRect: innerShadow.bounds, cornerRadius:radius).reversing()
+            
+            path.append(cutout)
+            innerShadow.shadowPath = path.cgPath
+            innerShadow.masksToBounds = true
+            
+            // Shadow properties
+            innerShadow.shadowColor = UIColor.black.cgColor
+            innerShadow.shadowOffset = CGSize(width: 0, height: 0)
+            innerShadow.shadowOpacity = 0.5
+            innerShadow.shadowRadius = 2
+            innerShadow.cornerRadius = self.layer.cornerRadius
+            layer.addSublayer(innerShadow)
+        }
+        
+        func applyInnerShadow() {
+            let innerShadowLayer = CALayer()
+            innerShadowLayer.frame = self.frame
+            
+            let radius: CGFloat = 10
+            let path = UIBezierPath(roundedRect: innerShadowLayer.bounds.insetBy(dx: -9, dy: -8), cornerRadius: radius)
+            let innerPath = UIBezierPath(roundedRect: innerShadowLayer.bounds, cornerRadius: radius).reversing()
+            
+            path.append(innerPath)
+            
+            innerShadowLayer.shadowPath = path.cgPath
+            innerShadowLayer.masksToBounds = true
+            innerShadowLayer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.05).cgColor
+            innerShadowLayer.shadowOffset = CGSize(width: 9, height: 8)
+            innerShadowLayer.shadowOpacity = 0.7
+            innerShadowLayer.shadowRadius = 5
+            innerShadowLayer.cornerRadius = radius
+            innerShadowLayer.cornerRadius = self.layer.cornerRadius
+            innerShadowLayer.borderWidth = self.layer.borderWidth
+            innerShadowLayer.borderColor = self.layer.borderColor
+            
+            self.layer.addSublayer(innerShadowLayer)
+            self.layer.masksToBounds = true
+        }
+    
     func setGradiantBackground(_ colorOne:UIColor,_ colorTwo:UIColor , startPoint:CGPoint,endPoint:CGPoint){
         
         let gradiantLayer = CAGradientLayer()

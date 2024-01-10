@@ -14,5 +14,8 @@ internal enum Colors {
   internal static let PrimaryButtonColor = UIColor(named: "PrimaryButtonColor")
   internal static let borderColor = UIColor(named: "BorderColor")
   internal static let colorOfShadowCells = UIColor(named: "ColorOfShadowCells")
-    
+  internal static let shadeOfOrange = UIColor(named: "ShadeOfOrange")
+  internal static let buttonColor = UIColor(named: "ButtonColor")
+  internal static let brownColor = UIColor(named: "BrownColor")
+
 }
