@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -9,17 +10,28 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="tt_commons_pro_demibold.otf">
+            <string>FONTSPRINGDEMO-TTCommonsProCondDemiBoldRegular</string>
+        </array>
+        <array key="tt_commons_pro_medium.otf">
+            <string>FONTSPRINGDEMO-TTCommonsProMediumRegular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginVC" customModule="MYCash_Task" customModuleProvider="target">
             <connections>
                 <outlet property="activityIndicator" destination="Whl-Nm-fqq" id="hGh-Gr-hkZ"/>
                 <outlet property="containerView" destination="EMW-8o-Ifa" id="ckI-oV-2eb"/>
-                <outlet property="emailTextField" destination="605-n2-OD2" id="tyC-an-pvz"/>
+                <outlet property="emailContainerView" destination="K2E-N7-ib3" id="2ie-4l-uMC"/>
+                <outlet property="emailTextField" destination="FSJ-L2-aUy" id="Pe9-pM-cws"/>
                 <outlet property="forggetPasswordButton" destination="Ofg-Lw-G4L" id="YzZ-Kr-Wxy"/>
                 <outlet property="loginButton" destination="59o-BS-fsf" id="Yet-eU-7iy"/>
                 <outlet property="mainStackView" destination="efR-TM-qTd" id="oNa-6y-WlZ"/>
-                <outlet property="passwordTextField" destination="jfD-k8-d8d" id="Fgs-0E-4gr"/>
+                <outlet property="passwordContainerView" destination="a1h-r5-Sw2" id="bAX-gl-PyA"/>
+                <outlet property="passwordTextField" destination="grV-Jd-clT" id="zyN-5p-NTa"/>
                 <outlet property="signupButton" destination="vEN-Ty-0Q0" id="y0s-GO-eJL"/>
+                <outlet property="togglePasswordButton" destination="H6C-pd-bBz" id="bbK-bT-zk2"/>
                 <outlet property="topView" destination="hQW-g0-QJI" id="sPK-Dc-7qX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -42,8 +54,8 @@
                             <rect key="frame" x="112.66666666666669" y="0.0" width="165" height="68"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOG IN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5o0-Kh-3C4">
-                                    <rect key="frame" x="43.999999999999986" y="19.666666666666686" width="77" height="28.666666666666671"/>
-                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                    <rect key="frame" x="51.999999999999986" y="19" width="61" height="30"/>
+                                    <fontDescription key="fontDescription" name="FONTSPRINGDEMO-TTCommonsProCondDemiBoldRegular" family="FONTSPRING DEMO - TT Commons Pro Cond DemiBold" pointSize="24"/>
                                     <color key="textColor" name="PrimaryTextColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -57,53 +69,113 @@
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="efR-TM-qTd">
-                            <rect key="frame" x="20" y="98.000000000000028" width="350" height="319.66666666666674"/>
+                            <rect key="frame" x="20" y="98" width="350" height="319"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="1FC-sA-o1f">
-                                    <rect key="frame" x="0.0" y="0.0" width="350" height="78.666666666666671"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="350" height="79.666666666666671"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nju-yU-v95" customClass="PaddedLabel" customModule="MYCash_Task" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="350" height="21.666666666666668"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="22.666666666666668"/>
+                                            <fontDescription key="fontDescription" name="FONTSPRINGDEMO-TTCommonsProMediumRegular" family="FONTSPRING DEMO - TT Commons Pro Medium" pointSize="18"/>
                                             <color key="textColor" name="PrimaryTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="605-n2-OD2" customClass="StyledTextField" customModule="MYCash_Task" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="28.666666666666686" width="350" height="50"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                        </textField>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K2E-N7-ib3" customClass="InnerShadowView" customModule="MYCash_Task" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="29.666666666666686" width="350" height="50"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FSJ-L2-aUy" customClass="StyledTextField" customModule="MYCash_Task" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="334" height="34"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="FSJ-L2-aUy" firstAttribute="top" secondItem="K2E-N7-ib3" secondAttribute="top" constant="8" id="3X9-Fc-WUC"/>
+                                                <constraint firstItem="FSJ-L2-aUy" firstAttribute="leading" secondItem="K2E-N7-ib3" secondAttribute="leading" constant="8" id="Ggv-Wb-lqB"/>
+                                                <constraint firstAttribute="trailing" secondItem="FSJ-L2-aUy" secondAttribute="trailing" constant="8" id="JID-tU-4IO"/>
+                                                <constraint firstAttribute="bottom" secondItem="FSJ-L2-aUy" secondAttribute="bottom" constant="8" id="QDe-FF-k7l"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="12"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="0.80000000000000004"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" name="BorderColor"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="znn-CJ-056">
-                                    <rect key="frame" x="0.0" y="90.666666666666629" width="350" height="79.666666666666686"/>
+                                    <rect key="frame" x="0.0" y="91.666666666666629" width="350" height="80.666666666666686"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84B-3s-GYc" customClass="PaddedLabel" customModule="MYCash_Task" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="350" height="21.666666666666668"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="22.666666666666668"/>
+                                            <fontDescription key="fontDescription" name="FONTSPRINGDEMO-TTCommonsProMediumRegular" family="FONTSPRING DEMO - TT Commons Pro Medium" pointSize="18"/>
                                             <color key="textColor" name="PrimaryTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jfD-k8-d8d" customClass="StyledPasswordTextField" customModule="MYCash_Task" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="29.666666666666742" width="350" height="50"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                        </textField>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a1h-r5-Sw2" customClass="InnerShadowView" customModule="MYCash_Task" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="30.666666666666742" width="350" height="50"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="grV-Jd-clT" customClass="StyledPasswordTextField" customModule="MYCash_Task" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="301" height="34"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6C-pd-bBz">
+                                                    <rect key="frame" x="319" y="15" width="27" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="27" id="BQx-9o-ng7"/>
+                                                        <constraint firstAttribute="height" constant="20" id="GJu-ch-owu"/>
+                                                    </constraints>
+                                                    <color key="tintColor" name="PrimaryTextColor"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="eye" catalog="system"/>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="H6C-pd-bBz" firstAttribute="leading" secondItem="grV-Jd-clT" secondAttribute="trailing" constant="10" id="10v-eN-0de"/>
+                                                <constraint firstAttribute="bottom" secondItem="grV-Jd-clT" secondAttribute="bottom" constant="8" id="2cO-DM-d7e"/>
+                                                <constraint firstItem="H6C-pd-bBz" firstAttribute="centerY" secondItem="a1h-r5-Sw2" secondAttribute="centerY" id="Gkl-lc-ntb"/>
+                                                <constraint firstItem="grV-Jd-clT" firstAttribute="top" secondItem="a1h-r5-Sw2" secondAttribute="top" constant="8" id="UMg-JE-yub"/>
+                                                <constraint firstItem="grV-Jd-clT" firstAttribute="leading" secondItem="a1h-r5-Sw2" secondAttribute="leading" constant="8" id="Ye4-Bf-uAw"/>
+                                                <constraint firstAttribute="trailing" secondItem="H6C-pd-bBz" secondAttribute="trailing" constant="4" id="oO0-NC-aZ6"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="12"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="0.80000000000000004"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" name="BorderColor"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="L5S-bO-Zfx">
-                                    <rect key="frame" x="0.0" y="182.33333333333337" width="350" height="97"/>
+                                    <rect key="frame" x="0.0" y="184.33333333333337" width="350" height="94.333333333333314"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ofg-Lw-G4L">
-                                            <rect key="frame" x="0.0" y="0.0" width="350" height="31"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="28.333333333333332"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="Forgot the password ?">
-                                                <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="12"/>
                                                 <color key="baseForegroundColor" name="GrayColor"/>
                                             </buttonConfiguration>
                                         </button>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="h4H-PZ-29h">
-                                            <rect key="frame" x="0.0" y="47" width="350" height="50"/>
+                                            <rect key="frame" x="0.0" y="44.333333333333258" width="350" height="50"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59o-BS-fsf" customClass="StyledButton" customModule="MYCash_Task" customModuleProvider="target">
                                                     <rect key="frame" x="38.666666666666657" y="0.0" width="273" height="50"/>
@@ -118,19 +190,19 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HDW-PA-0hw">
-                                    <rect key="frame" x="0.0" y="291.33333333333337" width="350" height="28.333333333333314"/>
+                                    <rect key="frame" x="0.0" y="290.66666666666663" width="350" height="28.333333333333314"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vfY-BB-Ryg">
-                                            <rect key="frame" x="72.333333333333329" y="0.0" width="205.66666666666669" height="28.333333333333332"/>
+                                            <rect key="frame" x="71.000000000000014" y="0.0" width="208.33333333333337" height="28.333333333333332"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don’t have an account ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNP-f5-cD0">
-                                                    <rect key="frame" x="0.0" y="0.0" width="136.33333333333334" height="28.333333333333332"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="139" height="28.333333333333332"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                     <color key="textColor" name="PrimaryTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEN-Ty-0Q0">
-                                                    <rect key="frame" x="136.33333333333331" y="0.0" width="69.333333333333314" height="28.333333333333332"/>
+                                                    <rect key="frame" x="139" y="0.0" width="69.333333333333314" height="28.333333333333332"/>
                                                     <color key="tintColor" name="PrimaryButtonColor"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="Sign up">
@@ -143,8 +215,8 @@
                                 </stackView>
                             </subviews>
                             <constraints>
-                                <constraint firstItem="59o-BS-fsf" firstAttribute="height" secondItem="jfD-k8-d8d" secondAttribute="height" id="DWZ-yg-5ww"/>
-                                <constraint firstItem="605-n2-OD2" firstAttribute="height" secondItem="jfD-k8-d8d" secondAttribute="height" id="neF-48-Bmk"/>
+                                <constraint firstItem="K2E-N7-ib3" firstAttribute="height" secondItem="a1h-r5-Sw2" secondAttribute="height" id="OR5-rR-xRw"/>
+                                <constraint firstItem="59o-BS-fsf" firstAttribute="height" secondItem="a1h-r5-Sw2" secondAttribute="height" id="QZL-kc-d0T"/>
                             </constraints>
                         </stackView>
                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Whl-Nm-fqq">
@@ -157,11 +229,11 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="jfD-k8-d8d" firstAttribute="height" secondItem="EMW-8o-Ifa" secondAttribute="height" multiplier="0.1" id="5iW-QP-YvU"/>
                         <constraint firstItem="Whl-Nm-fqq" firstAttribute="centerX" secondItem="EMW-8o-Ifa" secondAttribute="centerX" id="8nt-So-WWs"/>
                         <constraint firstItem="hQW-g0-QJI" firstAttribute="centerX" secondItem="EMW-8o-Ifa" secondAttribute="centerX" id="Hh0-x4-gEI"/>
                         <constraint firstItem="efR-TM-qTd" firstAttribute="leading" secondItem="EMW-8o-Ifa" secondAttribute="leading" constant="20" id="IFm-Jd-Vqk"/>
                         <constraint firstItem="hQW-g0-QJI" firstAttribute="top" secondItem="EMW-8o-Ifa" secondAttribute="top" id="QvS-Pr-VQN"/>
+                        <constraint firstItem="a1h-r5-Sw2" firstAttribute="height" secondItem="EMW-8o-Ifa" secondAttribute="height" multiplier="0.1" id="Sjf-VK-2Pf"/>
                         <constraint firstItem="efR-TM-qTd" firstAttribute="top" secondItem="hQW-g0-QJI" secondAttribute="bottom" constant="30" id="VMw-RY-ELx"/>
                         <constraint firstAttribute="trailing" secondItem="efR-TM-qTd" secondAttribute="trailing" constant="20" id="ZHp-yo-pDE"/>
                     </constraints>
@@ -190,7 +262,11 @@
     </objects>
     <resources>
         <image name="AuthbackgroundImage" width="428" height="926"/>
+        <image name="eye" catalog="system" width="128" height="79"/>
         <image name="logo" width="146" height="77"/>
+        <namedColor name="BorderColor">
+            <color red="0.70196078431372544" green="0.70196078431372544" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="GrayColor">
             <color red="0.61176470588235299" green="0.61176470588235299" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

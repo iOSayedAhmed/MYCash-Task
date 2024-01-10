@@ -25,7 +25,8 @@ class SignupVC: UIViewController {
     @IBOutlet private weak var loginButton: UIButton!
     @IBOutlet private var textFields: [UITextField]!
     @IBOutlet private weak var activityIndecator: UIActivityIndicatorView!
-    
+    @IBOutlet private weak var togglePasswordButton: UIButton!
+    @IBOutlet private weak var toggleConfirmPasswordButton: UIButton!
     
     private var  signupViewModel:SignupViewModel!
     private let disposeBag = DisposeBag()
@@ -35,6 +36,7 @@ class SignupVC: UIViewController {
         super.viewDidLoad()
         
         setupView()
+        setupTogglePasswordButtons()
         setupbinding()
     }
     
@@ -66,9 +68,9 @@ class SignupVC: UIViewController {
         emailTextField.keyboardType = .emailAddress
         phoneNumberTextField.keyboardType = .phonePad
         
-        textFields.forEach {textfild in
-            textfild.setPadding(horizontal: 12)
-        }
+//        textFields.forEach {textfild in
+//            textfild.setPadding(horizontal: 12)
+//        }
         activityIndecator.hidesWhenStopped = true
         setPlaceholders()
         
@@ -80,6 +82,56 @@ class SignupVC: UIViewController {
         phoneNumberTextField.placeholder = "Write 11 numbers"
         passwordTextField.placeholder = "Write 8 character at least"
         confirmPasswordTextField.placeholder = "Write your password again"
+    }
+    
+    private func setupTogglePasswordButtons(){
+        // Configure the button
+        togglePasswordButton.tintColor = .gray
+        togglePasswordButton.setImage(UIImage(systemName:"eye")?.withRenderingMode(.alwaysTemplate), for: .normal) // Set the default eye icon
+        togglePasswordButton.addTarget(self, action: #selector(togglePasswordVisibility), for: .touchUpInside)
+        
+        toggleConfirmPasswordButton.tintColor = .gray
+        toggleConfirmPasswordButton.setImage(UIImage(systemName:"eye")?.withRenderingMode(.alwaysTemplate), for: .normal) // Set the default eye icon
+        toggleConfirmPasswordButton.addTarget(self, action: #selector(toggleConfirmPasswordVisibility), for: .touchUpInside)
+    }
+    @objc private func togglePasswordVisibility() {
+        passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
+
+        // Change the button's icon based on the text visibility
+        let imageName = passwordTextField.isSecureTextEntry ? "eye" : "eye.slash"
+        togglePasswordButton.setImage(UIImage(systemName: imageName)?.withRenderingMode(.alwaysTemplate), for: .normal)
+
+        // To prevent the text field from losing the current typing cursor position
+        if let existingText = passwordTextField.text {
+            passwordTextField.text?.removeAll()
+            passwordTextField.text = existingText
+        }
+        
+        // Maintain the cursor position
+        if let textRange = passwordTextField.selectedTextRange {
+            passwordTextField.selectedTextRange = nil
+            passwordTextField.selectedTextRange = textRange
+        }
+    }
+    
+    @objc private func toggleConfirmPasswordVisibility() {
+        confirmPasswordTextField.isSecureTextEntry = !confirmPasswordTextField.isSecureTextEntry
+
+        // Change the button's icon based on the text visibility
+        let imageName = confirmPasswordTextField.isSecureTextEntry ? "eye" : "eye.slash"
+        toggleConfirmPasswordButton.setImage(UIImage(systemName: imageName)?.withRenderingMode(.alwaysTemplate), for: .normal)
+
+        // To prevent the text field from losing the current typing cursor position
+        if let existingText = confirmPasswordTextField.text {
+            confirmPasswordTextField.text?.removeAll()
+            confirmPasswordTextField.text = existingText
+        }
+        
+        // Maintain the cursor position
+        if let textRange = confirmPasswordTextField.selectedTextRange {
+            confirmPasswordTextField.selectedTextRange = nil
+            confirmPasswordTextField.selectedTextRange = textRange
+        }
     }
     
     private func setupbinding(){
@@ -106,6 +158,8 @@ class SignupVC: UIViewController {
                 guard let self , let userData = registerModel.data else {return}
                 print("Login successful: \(registerModel)")
                 if registerModel.success ?? false && registerModel.responseCode ?? 0 == 200 {
+                    UserDefaults.standard.setObject(true, forKey: .userLoggedin)
+                    UserDefaults.standard.setCodableObject(userData, forKey: .saveUserData)
                     self.signupViewModel.didUserRegistered(userData: userData)
                 }else {
                     showMessage(typeMessage: .error, message: registerModel.message ?? "")
