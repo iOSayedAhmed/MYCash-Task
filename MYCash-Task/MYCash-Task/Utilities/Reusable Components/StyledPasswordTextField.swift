@@ -16,14 +16,12 @@ class StyledPasswordTextField: UITextField {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
-        applyInnerShadow()
     }
     
     // Init from storyboard
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
-        applyInnerShadow()
 
     }
     
@@ -31,30 +29,7 @@ class StyledPasswordTextField: UITextField {
         super.layoutSubviews()
     }
     
-    private func applyInnerShadow() {
-           let innerShadowLayer = CALayer()
-           innerShadowLayer.frame = self.bounds
-           
-           let radius: CGFloat = 10
-           let path = UIBezierPath(roundedRect: innerShadowLayer.bounds.insetBy(dx: -9, dy: -8), cornerRadius: radius)
-           let innerPath = UIBezierPath(roundedRect: innerShadowLayer.bounds, cornerRadius: radius).reversing()
-           
-           path.append(innerPath)
-           
-           innerShadowLayer.shadowPath = path.cgPath
-           innerShadowLayer.masksToBounds = true
-           innerShadowLayer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.05).cgColor
-           innerShadowLayer.shadowOffset = CGSize(width: 9, height: 8)
-        innerShadowLayer.shadowOpacity = 0.7
-           innerShadowLayer.shadowRadius = 5
-           innerShadowLayer.cornerRadius = radius
-        innerShadowLayer.cornerRadius = self.layer.cornerRadius
-        innerShadowLayer.borderWidth = self.layer.borderWidth
-        innerShadowLayer.borderColor = self.layer.borderColor
-           
-           self.layer.addSublayer(innerShadowLayer)
-           self.layer.masksToBounds = true
-       }
+  
     let padding = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         override func textRect(forBounds bounds: CGRect) -> CGRect {
             return bounds.inset(by: padding)
@@ -74,18 +49,20 @@ class StyledPasswordTextField: UITextField {
             return rect
         }
     
+    
     private func setup() {
         // Common styling options could be applied here as well
+
         self.borderStyle = .none
         self.textColor = .black
-        self.layer.borderColor = Colors.borderColor?.cgColor
-        self.layer.cornerRadius = 10
-        self.layer.borderWidth = 0.8
+//        self.layer.borderColor = Colors.borderColor?.cgColor
+//        self.layer.cornerRadius = 10
+//        self.layer.borderWidth = 0.8
         
         
         // Configure the button
         togglePasswordButton.tintColor = .gray
-        togglePasswordButton.setImage(UIImage(systemName: "eye")?.withRenderingMode(.alwaysTemplate), for: .normal) // Set the default eye icon
+        togglePasswordButton.setImage(UIImage(systemName:"eye")?.withRenderingMode(.alwaysTemplate), for: .normal) // Set the default eye icon
         togglePasswordButton.addTarget(self, action: #selector(togglePasswordVisibility), for: .touchUpInside)
         
         // Add inset (padding) to the button's content
@@ -95,8 +72,8 @@ class StyledPasswordTextField: UITextField {
         
         // Configure the text field
         self.isSecureTextEntry = true // Default as password field
-        self.rightView = togglePasswordButton
-        self.rightViewMode = .always // Show the toggle button always
+//        self.rightView = togglePasswordButton
+//        self.rightViewMode = .always // Show the toggle button always
 
        
 
