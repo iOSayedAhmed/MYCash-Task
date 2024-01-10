@@ -7,13 +7,20 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="tt_commons_pro_bold.otf">
+            <string>FONTSPRINGDEMO-TTCommonsProCondBold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserInformationCard" customModule="MYCash_Task" customModuleProvider="target">
             <connections>
                 <outlet property="addressName" destination="b7M-pF-kaX" id="rQc-MK-W6i"/>
                 <outlet property="containerView" destination="9IL-1d-aL7" id="m3h-0v-M8Z"/>
+                <outlet property="containerViewOfTextField" destination="2RN-Vb-AVq" id="8km-U1-0vq"/>
                 <outlet property="filterButton" destination="hf7-eX-GCM" id="QNn-IY-JKx"/>
                 <outlet property="profileButton" destination="mR3-xt-a2x" id="RNq-mj-zO9"/>
                 <outlet property="searchButton" destination="50M-O5-psr" id="DfG-0a-gHU"/>
@@ -67,41 +74,65 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eTb-Dj-2nd">
-                                    <rect key="frame" x="0.0" y="208" width="559" height="40"/>
+                                    <rect key="frame" x="0.0" y="198" width="559" height="50"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zq0-Ff-Dej">
-                                            <rect key="frame" x="0.0" y="0.0" width="463" height="40"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                        </textField>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2RN-Vb-AVq" customClass="InnerShadowView" customModule="MYCash_Task" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="443" height="50"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search for fav food ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zq0-Ff-Dej">
+                                                    <rect key="frame" x="8" y="8" width="427" height="34"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="FONTSPRINGDEMO-TTCommonsProCondBold" family="FONTSPRING DEMO - TT Commons Pro Cond" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="Zq0-Ff-Dej" firstAttribute="top" secondItem="2RN-Vb-AVq" secondAttribute="top" constant="8" id="Rc4-SW-Dal"/>
+                                                <constraint firstItem="Zq0-Ff-Dej" firstAttribute="leading" secondItem="2RN-Vb-AVq" secondAttribute="leading" constant="8" id="YTL-N8-g4d"/>
+                                                <constraint firstAttribute="bottom" secondItem="Zq0-Ff-Dej" secondAttribute="bottom" constant="8" id="eQE-Xm-eC2"/>
+                                                <constraint firstAttribute="trailing" secondItem="Zq0-Ff-Dej" secondAttribute="trailing" constant="8" id="oh0-Mh-fZu"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="12"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="0.80000000000000004"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" name="BorderColor"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E09-uo-O9f">
-                                            <rect key="frame" x="471" y="0.0" width="88" height="40"/>
+                                            <rect key="frame" x="451" y="0.0" width="108" height="50"/>
                                             <subviews>
                                                 <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="i3z-yL-FiL">
-                                                    <rect key="frame" x="0.0" y="0.0" width="88" height="40"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="108" height="50"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchIcon" translatesAutoresizingMaskIntoConstraints="NO" id="fIz-Cc-wWM">
-                                                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                         </imageView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FilterIcon" translatesAutoresizingMaskIntoConstraints="NO" id="4ZC-iW-PmP">
-                                                            <rect key="frame" x="48" y="0.0" width="40" height="40"/>
+                                                            <rect key="frame" x="58" y="0.0" width="50" height="50"/>
                                                         </imageView>
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="O9r-lm-3a5">
-                                                    <rect key="frame" x="0.0" y="0.0" width="88" height="40"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="108" height="50"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50M-O5-psr">
-                                                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="50M-O5-psr" secondAttribute="height" multiplier="1:1" id="3Pe-kf-5LC"/>
-                                                                <constraint firstAttribute="height" constant="40" id="bio-ny-cVh"/>
+                                                                <constraint firstAttribute="height" constant="50" id="bio-ny-cVh"/>
                                                             </constraints>
                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                             <buttonConfiguration key="configuration" style="plain" image="searchIcon"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hf7-eX-GCM">
-                                                            <rect key="frame" x="48" y="0.0" width="40" height="40"/>
+                                                            <rect key="frame" x="58" y="0.0" width="50" height="50"/>
                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                             <buttonConfiguration key="configuration" style="plain" image="FilterIcon"/>
                                                         </button>
@@ -149,11 +180,17 @@
         <image name="FilterIcon" width="22" height="21"/>
         <image name="chevron.forward" catalog="system" width="97" height="128"/>
         <image name="searchIcon" width="40" height="40"/>
+        <namedColor name="BorderColor">
+            <color red="0.70196078431372544" green="0.70196078431372544" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="BrownColor">
             <color red="0.72941176470588232" green="0.57647058823529407" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="PrimaryTextColor">
             <color red="0.28235294117647058" green="0.28235294117647058" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TrendingCollectionViewCell" customModule="MYCash_Task" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="478" height="388"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="478" height="388"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dwl-Xz-ADM">
+                        <rect key="frame" x="0.0" y="10" width="478" height="368"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pzv-In-AyN">
+                                <rect key="frame" x="4" y="4" width="470" height="360"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xlL-H2-Ybn">
+                                        <rect key="frame" x="0.0" y="0.0" width="470" height="360"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AuthbackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="lCj-H3-8lq">
+                                                <rect key="frame" x="0.0" y="0.0" width="470" height="360"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pzv-In-AyN" firstAttribute="leading" secondItem="Dwl-Xz-ADM" secondAttribute="leading" constant="4" id="Eej-k4-6NT"/>
+                            <constraint firstAttribute="bottom" secondItem="pzv-In-AyN" secondAttribute="bottom" constant="4" id="WaA-mJ-PyU"/>
+                            <constraint firstAttribute="trailing" secondItem="pzv-In-AyN" secondAttribute="trailing" constant="4" id="uEw-QO-2Ie"/>
+                            <constraint firstItem="pzv-In-AyN" firstAttribute="top" secondItem="Dwl-Xz-ADM" secondAttribute="top" constant="4" id="x4V-p1-N81"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="0.0" height="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Dwl-Xz-ADM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="ICS-tB-jpi"/>
+                <constraint firstItem="Dwl-Xz-ADM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="XsD-mq-TF5"/>
+                <constraint firstAttribute="trailing" secondItem="Dwl-Xz-ADM" secondAttribute="trailing" id="hrv-nK-c4X"/>
+                <constraint firstAttribute="bottom" secondItem="Dwl-Xz-ADM" secondAttribute="bottom" constant="10" id="wkF-HS-5jd"/>
+            </constraints>
+            <size key="customSize" width="478" height="388"/>
+            <connections>
+                <outlet property="containerView" destination="Dwl-Xz-ADM" id="Mrw-QS-CSF"/>
+                <outlet property="image" destination="lCj-H3-8lq" id="uUG-tE-bpI"/>
+            </connections>
+            <point key="canvasLocation" x="117.55725190839694" y="138.73239436619718"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="AuthbackgroundImage" width="428" height="926"/>
+    </resources>
+</document>

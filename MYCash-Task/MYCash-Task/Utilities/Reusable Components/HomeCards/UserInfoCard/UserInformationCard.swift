@@ -18,7 +18,7 @@ class UserInformationCard: UIView {
     @IBOutlet weak var serchTextField: UITextField!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var filterButton: UIButton!
-    
+    @IBOutlet weak var containerViewOfTextField: UIView!
     
     
     override func awakeFromNib() {
@@ -47,12 +47,16 @@ class UserInformationCard: UIView {
     func configureDataView(userData:UserData){
         userName.text = userData.name ?? ""
         if !(userData.addresses?.isEmpty ?? false) {
-            addressName.text = userData.addresses?[0].address ?? ""
+            addressName.text = userData.addresses?[0].address ?? "Please Update Your Address"
+        }else{
+            addressName.text = "Please Update Your Address"
+
         }
     }
     
     private func setupView(){
-        containerView.setGradiantBackground(.secondText.withAlphaComponent(0.1), .white, startPoint: CGPoint(x: 0.0, y: 0.0), endPoint: CGPoint(x: 0.0, y: 1.0))
+        containerView.setGradiantBackground(.secondText.withAlphaComponent(0.1), .white, startPoint: CGPoint(x: 0.0, y: 0.0), endPoint: CGPoint(x: 0.0, y: 10.0))
+        containerViewOfTextField.applyInnerShadow()
     }
     
         private func commonInit() {

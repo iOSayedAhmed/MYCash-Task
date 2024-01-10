@@ -16,9 +16,10 @@ class CategoriesCardCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupView()
+        
     }
     func setupView(){
-        containerView.applyShadow(color: Colors.colorOfShadowCells ?? .gray, alpha: 0.3, x: 0, y: 8, blur: 10, spread: 0)
+        containerView.applyShadow(color: Colors.colorOfShadowCells!, alpha: 0.3, x: 0, y: 5, blur: 10, spread: 0)
     }
 
 }
