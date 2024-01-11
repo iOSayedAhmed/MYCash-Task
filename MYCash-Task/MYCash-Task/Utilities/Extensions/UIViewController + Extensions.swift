@@ -17,7 +17,7 @@ extension UIViewController {
     }
 
     func isValidPassword(_ password: String) -> Bool {
-        return password.count >= 6
+        return password.count >= 8
     }
     
     func isValidName(_ name: String) -> Bool {
